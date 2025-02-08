@@ -29,17 +29,25 @@
         </a>
     </li>
 
-    {{-- sidedbar buatt superadmin --}}
+    {{-- sidebar buatt superadmin --}}
     <hr class="sidebar-divider">
     <div class="sidebar-heading">Kelola</div>
     <li class="nav-item">
         <a href="" class="nav-link">
-            <i class="fa-solid fa-user-tie"></i>
+            <i class="fa-solid fa-building"></i>
             <span>Kelola Perusahaan</span>
+        </a>
+        <a href="" class="nav-link">
+            <i class="fa-solid fa-user-tie"></i>
+            <span>Kelola Owner</span>
         </a>
         <a href="" class="nav-link">
             <i class="fa-light fa-users"></i>
             <span>Kelola Kasir</span>
+        </a>
+        <a href="" class="nav-link">
+            <i class="fa-solid fa-users"></i>
+            <span>Kelola Member</span>
         </a>
     </li>
 
@@ -48,15 +56,15 @@
     <div class="sidebar-heading">Laporan</div>
     <li class="nav-item">
         <a href="" class="nav-link">
-            <i class="fa-light fa-users"></i>
+            <i class="fa-sharp fa-solid fa-chart-simple"></i>
             <span>Pemasukan</span>
         </a>
         <a href="" class="nav-link">
-            <i class="fa-light fa-users"></i>
+            <i class="fa-solid fa-box-open"></i>
             <span>Barang Terjual</span>
         </a>
         <a href="" class="nav-link">
-            <i class="fa-light fa-users"></i>
+            <i class="fa-solid fa-box"></i>
             <span>Stok Tambah</span>
         </a>
     </li>
