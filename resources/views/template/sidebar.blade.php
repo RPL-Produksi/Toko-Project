@@ -19,7 +19,7 @@
     <div class="sidebar-heading">Kelola</div>
 
     <li class="nav-item">
-        <a href="{{ route('admin.manage.class') }}" class="nav-link">
+        <a href="" class="nav-link">
             <i class="fa-regular fa-fw fa-school"></i>
             <span>Kelola Kelas</span>
         </a>
