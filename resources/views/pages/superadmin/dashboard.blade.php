@@ -6,7 +6,7 @@
 @endpush
 
 @section('content')
-    <h1>Dashboard</h1>
+    <h1>Dashboard Superadmin</h1>
 
 @endsection
 
