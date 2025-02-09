@@ -12,11 +12,12 @@
         rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/sb-admin.min.css') }}">
     <link rel="stylesheet" href="https://naramizaru.github.io/awesome-2.0/css/all.css">
+    {{-- <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}"> --}}
     @stack('css')
     <title>LumiStore | @yield('title')</title>
 </head>
 
-<body class="min-vh-100 d-flex justify-content-center align-items-center bg-login">
+<body class="">
     @yield('content')
 
     @include('sweetalert::alert')

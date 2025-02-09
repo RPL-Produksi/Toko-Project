@@ -3,14 +3,14 @@
         <i class="fa-regular fa-bars"></i>
     </button>
 
-    <h5 class="text-primary d-none d-md-block">E-Voting | SMK Negeri 2 Sukabumi</h5>
+    <h5 class="text-primary d-none d-md-block">Lumi Sotre</h5>
 
     <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown no-arrow">
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
-                <img src="{{ asset('assets/img/avatar-1.png') }}"
+                <img src="{{ asset('assets/image/matching pfp (2).jpg') }}"
                     class="img-profile rounded-circle font-weight-bold"></img>
             </a>
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
