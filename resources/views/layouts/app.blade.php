@@ -12,6 +12,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/sb-admin.min.css') }}">
     <link rel="stylesheet" href="https://naramizaru.github.io/awesome-2.0/css/all.css">
+    <title>Kasir | LumiStore</title>
     @viteReactRefresh
     @vite('resources/js/app.jsx')
     @inertiaHead

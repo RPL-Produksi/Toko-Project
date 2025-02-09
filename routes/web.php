@@ -7,6 +7,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function() {
-    return Inertia('Home');
+
+Route::prefix('kasir')->group(function () {
+    Route::inertia('/dashboard', 'Dashboard');
 });
