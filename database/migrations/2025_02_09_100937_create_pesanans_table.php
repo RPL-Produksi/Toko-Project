@@ -11,10 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pesanans', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
+        // Schema::create('pesanans', function (Blueprint $table) {
+        //     $table->uuid('id')->primary();
+        //     $table->foreignUuid('perusahaan_id')->constrained('perusahaans')->cascadeOnDelete();
+        //     $table->foreignUuid('kasir_id')->constrained('kasirs')->cascadeOnDelete();
+            
+        //     $table->timestamps();
+        // });
     }
 
     /**
