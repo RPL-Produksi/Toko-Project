@@ -2,9 +2,27 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Perusahaan extends Model
 {
-    //
+    use HasUuids;
+    protected $primaryKey = 'id'; // Menentukan kolom id sebagai primary key
+    public $incrementing = false; // Karena menggunakan UUID, bukan auto-increment
+    protected $keyType = 'string'; // Menetapkan tipe primary key menjadi string
+
+    protected $fillable = [
+        'nama', 'alamat', 'nomor_telp', 'email', 'is_paid', 'expired_at'
+    ];
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($perusahaan) {
+            $perusahaan->id = Str::uuid(); // Membuat UUID baru saat perusahaan baru dibuat
+        });
+    }
 }

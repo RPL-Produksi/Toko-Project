@@ -36,7 +36,7 @@
         <hr class="sidebar-divider">
         <div class="sidebar-heading">Kelola</div>
         <li class="nav-item">
-            <a href="" class="nav-link">
+            <a href="{{ route('perusahaan') }}" class="nav-link">
                 <i class="fa-solid fa-building"></i>
                 <span>Kelola Perusahaan</span>
             </a>
