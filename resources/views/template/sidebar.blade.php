@@ -20,17 +20,12 @@
     <div class="sidebar-heading">Kelola</div>
     <li class="nav-item">
         <a href="" class="nav-link">
-<<<<<<< HEAD
             <i class="fa-solid fa-user-tie"></i>
             <span>Kelola Owner</span>
         </a>
         <a href="" class="nav-link">
             <i class="fa-light fa-users"></i>
             <span>Kelola Kasir</span>
-=======
-            <i class="fa-regular fa-fw fa-school"></i>
-            <span>Kelola Kelas</span>
->>>>>>> 9feadf5ea69491e6477f7049df87c9cfd0214f00
         </a>
     </li>
 
