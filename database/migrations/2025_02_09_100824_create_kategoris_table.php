@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('kategoris', function (Blueprint $table) {
             $table->uuid('id')->primary();
+            $table->string('nama');
+            $table->string('deskripsi')->nullable();
+            $table->string('icon')->nullable();
             $table->timestamps();
         });
     }

@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('perusahaans', function (Blueprint $table) {
             $table->uuid('id')->primary();
+            $table->string('nama');
+            $table->string('alamat');
+            $table->string('nomor_telp');
+            $table->string('email')->nullable();
+            $table->tinyInteger('is_paid');
+            $table->timestamp('expired_at')->useCurrent();
             $table->timestamps();
         });
     }
