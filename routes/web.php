@@ -20,6 +20,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/dashboard', [SuperAdminController::class, 'dashboard'])->name('superadmin.dashboard');
         Route::get('/perusahaan', [PerusahaanController::class, 'index'])->name('perusahaan');
         Route::post('/storePerusahaan', [PerusahaanController::class, 'store'])->name('store.perusahaan');
+        Route::get('/delete/perusahaan/{id}', [PerusahaanController::class, 'delete'])->name('delete.perusahaan');
     });
 
     Route::prefix('kasir')->group(function () {
