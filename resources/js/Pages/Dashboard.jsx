@@ -108,7 +108,33 @@ const Dashboard = () => {
                                             </div>
                                         </div>
                                     ) : (
-                                        <p>Ini gambar</p>
+                                        <div className="col-3 mt-3">
+                                            <div className="card">
+                                                <div className="card-header">
+                                                    <img
+                                                        src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//87/MTA-2583230/indomie_indomie-goreng-rendang-mie-instan--91-g_full02.jpg"
+                                                        alt=""
+                                                        className="card-img-top"
+                                                    />
+                                                </div>
+                                                <div className="card-body">
+                                                    <h5 className="card-title">
+                                                        Indomie
+                                                    </h5>
+                                                    <p className="card-text">
+                                                        Rp. 3.000
+                                                    </p>
+                                                </div>
+                                                <div className="card-footer d-flex justify-content-end bg-primary">
+                                                    <button className="btn btn-success btn-sm mr-2">
+                                                        <i className="fa-regular fa-plus"></i>
+                                                    </button>
+                                                    <button className="btn btn-secondary btn-sm">
+                                                        <i className="fa-regular fa-circle-info"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     )}
                                 </div>
                             </div>
