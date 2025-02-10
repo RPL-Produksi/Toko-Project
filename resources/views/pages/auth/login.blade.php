@@ -32,7 +32,7 @@
                         <h3 class="text-center" style="color: #777777">Hallo! Selamat Datang</h3>
                     </div>
                     <div class="mt-5">
-                        <form action="" class="form-group" method="POST">
+                        <form action="{{ route('login') }}" class="form-group" method="POST">
                             @csrf
                             <div>
                                 <label for="username" class="text-secondary">Masukan username anda</label>
@@ -42,6 +42,11 @@
                                 <label for="password" class="text-secondary">Password</label>
                                 <input type="password" name="password" required class="form-control">
                             </div>
+                            @if (session('notif'))
+                                <div class="alert alert-danger mt-3">
+                                    {{ session('notif') }}
+                                </div>
+                            @endif
                             <div class="d-flex justify-content-end">
                                 <a class="mt-2 text-primary" style="font-size: 14px; text-decoration: none;">RPL
                                     Production</a>
