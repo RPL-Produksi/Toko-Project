@@ -15,21 +15,6 @@
         </a>
     </li>
 
-<<<<<<< HEAD
-    {{-- sidedbar buatt admin --}}
-    <hr class="sidebar-divider">
-    <div class="sidebar-heading">Kelola</div>
-    <li class="nav-item">
-        <a href="" class="nav-link">
-            <i class="fa-solid fa-user-tie"></i>
-            <span>Kelola Owner</span>
-        </a>
-        <a href="" class="nav-link">
-            <i class="fa-light fa-users"></i>
-            <span>Kelola Kasir</span>
-        </a>
-    </li>
-=======
     @if ($user->role == 'admin')
         <hr class="sidebar-divider">
         <div class="sidebar-heading">Kelola</div>
@@ -44,8 +29,6 @@
             </a>
         </li>
     @endif
->>>>>>> dev
-
 
     @if ($user->role == 'superadmin')
         {{-- sidebar buatt superadmin --}}

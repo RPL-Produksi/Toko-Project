@@ -25,7 +25,7 @@ class Perusahaan extends Model
         parent::boot();
 
         static::creating(function ($perusahaan) {
-            $perusahaan->id = Str::uuid(); // Membuat UUID baru saat perusahaan baru dibuat
+            $perusahaan->id = Str::uuid();
         });
     }
 }
