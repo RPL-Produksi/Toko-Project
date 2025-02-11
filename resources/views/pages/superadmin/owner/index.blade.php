@@ -54,40 +54,40 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title" id="modalAddPerusahaanLabel">Tambah Perusahaan</h3>
+                    <h3 class="modal-title" id="modalAddPerusahaanLabel">Tambah Owner</h3>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form method="POST" action="{{ route('store.perusahaan') }}" enctype="multipart/form-data"
-                        id="formStorePerusahaan">
+                    <form method="POST" action="{{ route('store.owner') }}" enctype="multipart/form-data"
+                        id="formStoreOwner">
                         @csrf
                         <div class="form-group">
-                            <label for="namaPerusahaan">Nama Perusahaan</label>
-                            <input type="text" name="nama" required class="form-control" id="namaPerusahaan"
-                                placeholder="Masukkan nama perusahaan">
+                            <label for="nama_lengkap">Nama Lengkap</label>
+                            <input type="text" name="nama_lengkap" required class="form-control" 
+                                placeholder="Masukkan nama lengkap owner">
                         </div>
                         <div class="form-group">
-                            <label for="namaPerusahaan">Alamat</label>
-                            <input type="text" required name="alamat" class="form-control" id="namaPerusahaan"
+                            <label for="username">Username</label>
+                            <input type="text" required name="username" class="form-control" 
                                 placeholder="Masukkan alamat perusahaan">
                         </div>
                         <div class="form-group">
-                            <label for="namaPerusahaan">Nomor Telepon</label>
-                            <input type="text" required name="nomor_telp" class="form-control" id="namaPerusahaan"
-                                placeholder="Masukkan nomor telepon perusahaan">
+                            <label for="nomor_telp">Nomor Telepon</label>
+                            <input type="number" required name="nomor_telp" class="form-control" 
+                                placeholder="Masukkan nomor telepon owner">
                         </div>
                         <div class="form-group">
-                            <label for="namaPerusahaan">Email</label>
-                            <input type="text" required name="email" class="form-control" id="namaPerusahaan"
-                                placeholder="Masukkan email perusahaan">
+                            <label for="password">Password</label>
+                            <input type="password" required name="password" class="form-control" 
+                                placeholder="Masukkan password owner">
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn bg-transparent text-primary" data-dismiss="modal">Tutup</button>
-                    <button type="submit" class="btn btn-success" form="formStorePerusahaan">Simpan</button>
+                    <button type="submit" class="btn btn-success" form="formStoreOwner">Simpan</button>
                 </div>
             </div>
         </div>

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nama');
             $table->string('alamat');
             $table->string('nomor_telp');
+            $table->foreignUuid('user_id')->nullable()->constrained('users')->nullOnDelete();
             $table->string('email')->nullable();
             $table->tinyInteger('is_paid')->nullable();
             $table->timestamp('expired_at')->useCurrent();
