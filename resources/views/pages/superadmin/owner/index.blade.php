@@ -1,5 +1,5 @@
 @extends('layouts.app-admin')
-@section('title', 'Kelola Perusahaan')
+@section('title', 'Kelola Owner')
 
 @push('css')
     <link rel="stylesheet" href="{{ asset('vendor/DataTables/datatables.min.css') }}">
@@ -9,7 +9,7 @@
 
     <div class="card p-3">
         <div class="d-flex justify-content-between">
-            <h3 class="text-primary">Kelola Perusahaan</h3>
+            <h3 class="text-primary">Kelola Owner</h3>
             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalAddPerusahaan">
                 <i class="fa-solid fa-plus"></i>
             </button>
@@ -19,21 +19,19 @@
             <thead>
                 <tr>
                     <td>No</td>
-                    <td>Nama Perusahaan</td>
-                    <td>Alamat</td>
+                    <td>Nama</td>
+                    <td>Username</td>
                     <td>Nomor Telepon</td>
-                    <td>Email</td>
                     <td>Aksi</td>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($perusahaan as $item)
+                @foreach ($userShow as $item)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $item->nama }}</td>
-                        <td>{{ $item->alamat }}</td>
+                        <td>{{ $item->nama_lengkap }}</td>
+                        <td>{{ $item->username }}</td>
                         <td>{{ $item->nomor_telp }}</td>
-                        <td>{{ $item->email }}</td>
                         <td>
                             <button type="button" data-toggle="modal" data-target="#modalEditPerusahaan{{ $item->id }}"
                                 class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></button>
@@ -96,7 +94,7 @@
     </div>
 
     <!-- Modal Edit Perusahaan -->
-    @foreach ($perusahaan as $item)
+    {{-- @foreach ($user as $item)
         <div class="modal fade" id="modalEditPerusahaan{{ $item->id }}" tabindex="-1" role="dialog"
             aria-labelledby="modalEditPerusahaan" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -140,7 +138,7 @@
                 </div>
             </div>
         </div>
-    @endforeach
+    @endforeach --}}
 
 @endsection
 

@@ -40,7 +40,7 @@
                 <i class="fa-solid fa-building"></i>
                 <span>Kelola Perusahaan</span>
             </a>
-            <a href="" class="nav-link">
+            <a href="{{ route('owner') }}" class="nav-link">
                 <i class="fa-solid fa-user-tie"></i>
                 <span>Kelola Owner</span>
             </a>

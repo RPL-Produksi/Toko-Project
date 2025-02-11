@@ -3,6 +3,7 @@
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\owner\OwnerController;
+use App\Http\Controllers\superadmin\KelolaOwnerController;
 use App\Http\Controllers\superadmin\PerusahaanController;
 use App\Http\Controllers\superadmin\SuperAdminController;
 use Illuminate\Support\Facades\Route;
@@ -21,6 +22,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/perusahaan', [PerusahaanController::class, 'index'])->name('perusahaan');
         Route::post('/storePerusahaan', [PerusahaanController::class, 'store'])->name('store.perusahaan');
         Route::get('/delete/perusahaan/{id}', [PerusahaanController::class, 'delete'])->name('delete.perusahaan');
+        Route::get('/kelola/owner', [KelolaOwnerController::class, 'index'])->name('owner');
     });
 
     Route::prefix('kasir')->group(function () {
