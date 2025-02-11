@@ -109,29 +109,88 @@ const Dashboard = () => {
                                         </div>
                                     ) : (
                                         <div className="col-3 mt-3">
-                                            <div className="card">
-                                                <div className="card-header">
-                                                    <img
-                                                        src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//87/MTA-2583230/indomie_indomie-goreng-rendang-mie-instan--91-g_full02.jpg"
-                                                        alt=""
-                                                        className="card-img-top"
-                                                    />
-                                                </div>
+                                            <div className="card border-0 shadow">
+                                                <img
+                                                    src="https://c.alfagift.id/product/1/1_A09430005096_20210705133027841_base.jpg"
+                                                    alt=""
+                                                    className=" rounded-top"
+                                                    height="220"
+                                                    style={{
+                                                        objectFit: "cover",
+                                                    }}
+                                                />
+                                                <span
+                                                    className="badge text-white position-absolute top-0 end-0 m-2 rounded-3"
+                                                    style={{
+                                                        backgroundColor:
+                                                            "#2E5077",
+                                                    }}
+                                                >
+                                                    Makanan
+                                                </span>
                                                 <div className="card-body">
-                                                    <h5 className="card-title">
+                                                    <h5 className="fw-bold text-center">
                                                         Indomie
                                                     </h5>
-                                                    <p className="card-text">
-                                                        Rp. 3.000
+                                                    <small className="text-secondary d-block text-center">
+                                                        Lorem ipsum dolor sit
+                                                        amet consectetur
+                                                        adipisicing elit.
+                                                        Officia tenetur hic
+                                                        saepe tempora dicta
+                                                        quibusdam excepturi, nam
+                                                        vel voluptates provident
+                                                        pariatur est ad sed, rem
+                                                        dolore dolorum
+                                                        voluptatum eaque enim.
+                                                    </small>
+                                                    <p
+                                                        className="text-center mt-2 fw-bold"
+                                                        style={{
+                                                            color: "#2E5077",
+                                                        }}
+                                                    >
+                                                        Rp 3.0000
                                                     </p>
-                                                </div>
-                                                <div className="card-footer d-flex justify-content-end bg-primary">
-                                                    <button className="btn btn-success btn-sm mr-2">
-                                                        <i className="fa-regular fa-plus"></i>
+                                                    <button
+                                                        type="button"
+                                                        className="btn w-100 text-white fw-bold mt-2 px-4 d-flex justify-content-center"
+                                                        style={{
+                                                            backgroundColor:
+                                                                " #2E5077",
+                                                        }}
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#purchaseModal"
+                                                        data-id=""
+                                                        data-nama=""
+                                                        data-harga=""
+                                                    >
+                                                        Beli sekarang
                                                     </button>
-                                                    <button className="btn btn-secondary btn-sm">
-                                                        <i className="fa-regular fa-circle-info"></i>
-                                                    </button>
+                                                    <div className="mt-3 row">
+                                                        <div className="col-6 d-flex align-items-center">
+                                                            <small className="text-secondary">
+                                                                <i className="fa-solid fa-box"></i>{" "}
+                                                                Stok : 5
+                                                            </small>
+                                                        </div>
+                                                        <div className="d-flex col-6 justify-content-end">
+                                                            <a
+                                                                href="#"
+                                                                className="btn rounded-circle btn-custom-border btn-detail"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#productDetailModal"
+                                                                data-nama=""
+                                                                data-deskripsi=""
+                                                                data-harga=""
+                                                                data-stok=""
+                                                                data-kategori=""
+                                                                data-photo=""
+                                                            >
+                                                                <i className="fa-solid fa-ellipsis"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
