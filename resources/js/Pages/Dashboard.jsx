@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
 import Navbar from "../Components/Navbar";
+import { router } from "@inertiajs/react";
 
-const Dashboard = () => {
+const DashboardPage = ({ produk }) => {
+    const [search, setSearch] = useState("");
+    const [kategori, setKategori] = useState("semua");
     const [isList, setIsList] = useState(false);
 
     useEffect(() => {
+        // console.log(produk)
         const isList = localStorage.getItem("isList");
         if (isList === "list") {
             setIsList(true);
@@ -17,6 +21,14 @@ const Dashboard = () => {
         const newIsList = !isList;
         setIsList(newIsList);
         localStorage.setItem("isList", newIsList ? "list" : "gambar");
+    };
+
+    const handleSearch = () => {
+        router.get(
+            "/kasir/dashboard",
+            { search, kategori },
+            { preserveState: true }
+        );
     };
 
     return (
@@ -34,10 +46,17 @@ const Dashboard = () => {
                                             name=""
                                             id=""
                                             className="form-control"
+                                            value={search}
+                                            onChange={(e) =>
+                                                setSearch(e.target.value)
+                                            }
                                             placeholder="Cari barang"
                                         />
                                     </div>
-                                    <button className="btn btn-primary mr-2">
+                                    <button
+                                        className="btn btn-primary mr-2"
+                                        onClick={handleSearch}
+                                    >
                                         <i className="fa-regular fa-search"></i>
                                     </button>
                                     <button
@@ -61,15 +80,23 @@ const Dashboard = () => {
                                             whiteSpace: "nowrap",
                                         }}
                                     >
-                                        <button className="btn btn-primary btn-sm mr-2">
-                                            Semua
-                                        </button>
-                                        <button className="btn btn-primary btn-sm mr-2">
-                                            Makanan
-                                        </button>
-                                        <button className="btn btn-primary btn-sm mr-2">
-                                            Minuman
-                                        </button>
+                                        {["Semua", "Makanan", "Minuman"].map(
+                                            (cat) => (
+                                                <button
+                                                    key={cat}
+                                                    className={`btn btn-sm mr-2 ${
+                                                        kategori === cat
+                                                            ? "btn-primary"
+                                                            : "btn-secondary"
+                                                    }`}
+                                                    onClick={() =>
+                                                        setKategori(cat)
+                                                    }
+                                                >
+                                                    {cat}
+                                                </button>
+                                            )
+                                        )}
                                     </div>
                                 </div>
                                 <div className="row">
@@ -88,21 +115,44 @@ const Dashboard = () => {
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                            <td>1</td>
-                                                            <td>001</td>
-                                                            <td>Indomie</td>
-                                                            <td>Rp. 3.000</td>
-                                                            <td>10</td>
-                                                            <td>
-                                                                <button className="btn btn-primary btn-sm mr-2">
-                                                                    <i className="fa-regular fa-plus"></i>
-                                                                </button>
-                                                                <button className="btn btn-secondary btn-sm">
-                                                                    <i className="fa-regular fa-circle-info"></i>
-                                                                </button>
-                                                            </td>
-                                                        </tr>
+                                                        {produk.map(
+                                                            (
+                                                                product,
+                                                                index
+                                                            ) => (
+                                                                <tr
+                                                                    key={
+                                                                        product.id
+                                                                    }
+                                                                >
+                                                                    <td>
+                                                                        {index +
+                                                                            1}
+                                                                    </td>
+                                                                    <td>
+                                                                        {
+                                                                            product.kode
+                                                                        }
+                                                                    </td>
+                                                                    <td>
+                                                                        {
+                                                                            product.nama
+                                                                        }
+                                                                    </td>
+                                                                    <td>
+                                                                        Rp{" "}
+                                                                        {
+                                                                            product.harga
+                                                                        }
+                                                                    </td>
+                                                                    <td>
+                                                                        {
+                                                                            product.stok
+                                                                        }
+                                                                    </td>
+                                                                </tr>
+                                                            )
+                                                        )}
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -216,4 +266,4 @@ const Dashboard = () => {
     );
 };
 
-export default Dashboard;
+export default DashboardPage;

@@ -25,7 +25,7 @@ const Navbar = ({ title }) => {
                             {LinkKasir &&
                                 LinkKasir.map((link, i) => (
                                     <li
-                                        className="nav-item"
+                                        className={`nav-item`} 
                                         style={{ textDecoration: "none" }}
                                         key={i}
                                     >

@@ -17,7 +17,7 @@ const LinkKasir = [
     },
     {
         name: "Kategori",
-        link: "",
+        link: "kategori",
     },
 ];
 
