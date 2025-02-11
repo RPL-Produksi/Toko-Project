@@ -9,7 +9,11 @@
         <li class="nav-item dropdown no-arrow">
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
+<<<<<<< HEAD
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
+=======
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ $user->nama_lengkap }}</span>
+>>>>>>> dev
                 <img src="{{ asset('assets/image/matching pfp (2).jpg') }}"
                     class="img-profile rounded-circle font-weight-bold"></img>
             </a>
@@ -41,7 +45,7 @@
             <div class="modal-body">Pilih "Keluar" di bawah jika Anda siap mengakhiri sesi Anda saat ini.</div>
             <div class="modal-footer">
                 <button class="btn btn-link" type="button" data-dismiss="modal">Batal</button>
-                <form action="" method="POST" class="form-with-loading">
+                <form action="{{ route('logout') }}" method="POST" class="form-with-loading">
                     @csrf
                     <button type="submit" class="btn btn-danger btn-loading">
                         <span class="btn-text">Keluar</span>

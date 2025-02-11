@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('alamat');
             $table->string('nomor_telp');
             $table->string('email')->nullable();
-            $table->tinyInteger('is_paid');
+            $table->tinyInteger('is_paid')->nullable();
             $table->timestamp('expired_at')->useCurrent();
             $table->timestamps();
         });
