@@ -20,7 +20,8 @@ Route::middleware(['auth'])->group(function () {
     Route::prefix('superadmin')->group(function() {
         Route::get('/dashboard', [SuperAdminController::class, 'dashboard'])->name('superadmin.dashboard');
         Route::get('/perusahaan', [PerusahaanController::class, 'index'])->name('perusahaan');
-        Route::post('/storePerusahaan', [PerusahaanController::class, 'store'])->name('store.perusahaan');
+        Route::post('/store/perusahaan', [PerusahaanController::class, 'store'])->name('store.perusahaan');
+        Route::post('/store/owner', [KelolaOwnerController::class, 'store'])->name('store.owner');
         Route::get('/delete/perusahaan/{id}', [PerusahaanController::class, 'delete'])->name('delete.perusahaan');
         Route::get('/kelola/owner', [KelolaOwnerController::class, 'index'])->name('owner');
     });

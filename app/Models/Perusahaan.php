@@ -9,12 +9,15 @@ use Illuminate\Support\Str;
 class Perusahaan extends Model
 {
     use HasUuids;
-    protected $primaryKey = 'id'; // Menentukan kolom id sebagai primary key
-    public $incrementing = false; // Karena menggunakan UUID, bukan auto-increment
-    protected $keyType = 'string'; // Menetapkan tipe primary key menjadi string
 
     protected $fillable = [
-        'nama', 'alamat', 'nomor_telp', 'email', 'is_paid', 'expired_at'
+        'nama',
+        'alamat',
+        'nomor_telp',
+        'email',
+        'is_paid',
+        'user_id',
+        'expired_at'
     ];
 
     protected static function boot()
