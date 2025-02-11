@@ -44,5 +44,13 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt(env('KASIR_PASSWORD')),
             'role' => env('KASIR_ROLE'),
         ]);
+
+        User::create([
+            'nama_lengkap' => env('MEMBER_NAMALENGKAP'),
+            'nomor_telp' => env('MEMBER_NOMORTELP'),
+            'username' => env('MEMBER_USERNAME'),
+            'password' => bcrypt(env('MEMBER_PASSWORD')),
+            'role' => env('MEMBER_ROLE'),
+        ]);
     }
 }

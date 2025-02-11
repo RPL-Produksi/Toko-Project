@@ -1,5 +1,5 @@
 @extends('layouts.app-admin')
-@section('title', 'Kelola Kasir')
+@section('title', 'Kelola Owner')
 
 @push('css')
     <link rel="stylesheet" href="{{ asset('vendor/DataTables/datatables.min.css') }}">
@@ -9,8 +9,8 @@
 
     <div class="card p-3">
         <div class="d-flex justify-content-between">
-            <h3 class="text-primary">Kelola Kasir</h3>
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalStore">
+            <h3 class="text-primary">Kelola Owner</h3>
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalAddPerusahaan">
                 <i class="fa-solid fa-plus"></i>
             </button>
         </div>
@@ -26,7 +26,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($kasir as $item)
+                @foreach ($owner as $item)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $item->nama_lengkap }}</td>

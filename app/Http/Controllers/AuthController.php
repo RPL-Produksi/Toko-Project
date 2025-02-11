@@ -19,11 +19,11 @@ class AuthController extends Controller
             $user = Auth::user();
 
             if ($user->role == 'admin') {
-                return redirect()->route('admin.dashboard');
+                return redirect()->route('admin.dashboard')->with('welcome', 'Welcome to the your dashboard');
             } elseif ($user->role == 'superadmin') {
-                return redirect()->route('superadmin.dashboard');
+                return redirect()->route('superadmin.dashboard')->with('welcome', 'Welcome to the your dashboard');;
             } elseif ($user->role == 'owner') {
-                return redirect()->route('owner.dashboard');
+                return redirect()->route('owner.dashboard')->with('welcome', 'Welcome to the your dashboard');;
             } 
         }
         return redirect()->back()->with('notif', 'Username atau password salah!');

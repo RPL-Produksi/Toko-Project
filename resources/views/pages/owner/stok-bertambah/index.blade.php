@@ -1,5 +1,5 @@
 @extends('layouts.app-admin')
-@section('title', 'Kelola Kasir')
+@section('title', 'Berang Bertambah')
 
 @push('css')
     <link rel="stylesheet" href="{{ asset('vendor/DataTables/datatables.min.css') }}">
@@ -9,7 +9,7 @@
 
     <div class="card p-3">
         <div class="d-flex justify-content-between">
-            <h3 class="text-primary">Kelola Kasir</h3>
+            <h3 class="text-primary">Laporan barang bertambah</h3>
             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalStore">
                 <i class="fa-solid fa-plus"></i>
             </button>
@@ -19,19 +19,17 @@
             <thead>
                 <tr>
                     <td>No</td>
-                    <td>Nama</td>
-                    <td>Username</td>
-                    <td>Nomor Telepon</td>
+                    <td>Nama Barang</td>
+                    <td>Stok</td>
                     <td>Aksi</td>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($kasir as $item)
+                @foreach ($produk as $item)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $item->nama_lengkap }}</td>
-                        <td>{{ $item->username }}</td>
-                        <td>{{ $item->nomor_telp }}</td>
+                        <td>{{ $item->nama }}</td>
+                        <td>{{ $item->stok }}</td>
                         <td>
                             <button type="button" data-toggle="modal" data-target="#modalEditPerusahaan{{ $item->id }}"
                                 class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></button>
@@ -39,8 +37,7 @@
                                     class="btn btn-danger btn-delete" 
                                     data-id="{{ $item->id }}">
                                     <i class="fa-solid fa-trash"></i>
-                                </a>
-                                
+                                </a>    
                         </td>
                     </tr>
                 @endforeach
